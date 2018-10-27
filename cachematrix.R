@@ -1,7 +1,7 @@
 ## Two functions, one is to create the cache and 
 ## the other is to populate and/or fetch the inverse from the cache
 
-## The function below creates a strucute to hold the matrix and its inverse 
+## The function below creates a structure to hold the matrix and its inverse 
 
 makeCacheMatrix <- function(x = matrix()) {
         mat_inv <- NULL #initialize inverse with null
@@ -36,7 +36,7 @@ cacheSolve <- function(x, ...) {
                 return(mat_inv)
         }
         mat <- x$get()
-        mat_inv <- solve(mat) #comute the inverse
+        mat_inv <- solve(mat) #compute the inverse
         x$set_inverse(mat_inv) #put the computed inverse in cache
         message("inverse added to cache")
         mat_inv
